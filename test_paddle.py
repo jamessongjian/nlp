@@ -29,7 +29,7 @@ print("测试案例 1: 基础测试")
 print("="*100)
 
 # 定义你想抽的"字段"，相当于自定义实体类型
-schema = ["人物", "公司", "产品"]
+schema = ["地名"]
 
 # 创建一个信息抽取任务
 print("\n正在初始化 PaddleNLP UIE 模型...")
@@ -37,7 +37,7 @@ ie = Taskflow("information_extraction", schema=schema)
 print("模型加载完成！")
 
 # 输入中文文本
-text = "昨天张三在北京和阿里巴巴的同事讨论了钉钉的新版功能。"
+text = "三清山天气"
 
 print(f"\n文本: {text}")
 print(f"Schema: {schema}\n")
@@ -49,7 +49,7 @@ print("识别结果:")
 print(result)
 print()
 
-
+"""
 # 测试案例 2: 商业场景
 print("="*100)
 print("测试案例 2: 商业场景")
@@ -215,7 +215,7 @@ for i, test_case in enumerate(test_cases, 1):
     print(f"  Schema: {schema}")
     print(f"  耗时: {elapsed_time:.4f} 秒")
     print(f"  结果: {result}")
-
+"""
 
 print("\n" + "="*100)
 print("测试完成！")

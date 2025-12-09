@@ -9,7 +9,7 @@ from transformers import AutoModel, AutoTokenizer, AutoModelForCausalLM
 def format_instruction(instruction, query, doc):
 
     if instruction is None:
-        instruction = 'Given a web search query, retrieve relevant passages that answer the query'
+        instruction = '你需要根据用户的问题计算文档的相似度，不是一个实体，相关性差。'
 
     output = "<Instruct>: {instruction}\n<Query>: {query}\n<Document>: {doc}".format(instruction=instruction,query=query, doc=doc)
 
@@ -92,24 +92,16 @@ task = 'Given a web search query, retrieve relevant passages that answer the que
 
 
 queries = [
-    "百慕大",
-    "百慕大",
-    "中国的首都在哪？",
-    "周杰伦的老婆",
-    "周杰伦的老婆",
-    "周杰伦的老婆"
+    "b站股票",
+    "华为股票"
 
 ]
 
 
 
 documents = [
-    "百慕大三角",
-    "百慕大短裤",
-    "北京",
-    "昆凌",
-    "叶惠美",
-    "蔡依林"
+    "哔哩哔哩股票",
+    "小米股票"
 
 ]
 
